@@ -1,5 +1,6 @@
 package com.example.underground
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        val intent = Intent(this, MapsActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onBackPressed() {
