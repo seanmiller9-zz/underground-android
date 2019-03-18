@@ -10,4 +10,13 @@
     <string name="action_logout">Logout</string>
     <string name="action_favorites">Favorite Places</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="where_would_you_like_to_go">Where would you like to go?</string>
+    <string name="restaurant">Restaurants</string>
+    <string name="cafe">Cafes</string>
+    <string name="attractions">Attractions</string>
+    <string name="bar">Bars &amp; Nightlife</string>
+    <string name="parks">Parks &amp; Outdoors</string>
+
+
 </resources>
