@@ -1,16 +1,17 @@
 package com.example.underground
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
-import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.View
+import android.widget.RelativeLayout
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 
@@ -36,6 +37,32 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 //
 //            val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
 //        mapFragment?.getMapAsync(this)
+
+
+        val restaurantLayout = findViewById<RelativeLayout>(R.id.restaurant_layout)
+        restaurantLayout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+        }
+
+        val cafeLayout = findViewById<RelativeLayout>(R.id.cafe_layout)
+        cafeLayout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+        }
+
+        val attractionsLayout = findViewById<RelativeLayout>(R.id.attractions_layout)
+        attractionsLayout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+        }
+
+        val barLayout = findViewById<RelativeLayout>(R.id.bar_layout)
+        barLayout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+        }
+
+        val parksLayout = findViewById<RelativeLayout>(R.id.parks_layout)
+        parksLayout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+        }
     }
 
 //    override fun onBackPressed() {
@@ -114,6 +141,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                 1
             )
         }
+    }
+
+    private fun youClickedTheBars(v: View) {
+        Log.d("Hey", "Clicked bar")
     }
 
 }
